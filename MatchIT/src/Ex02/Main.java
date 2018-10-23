@@ -251,7 +251,7 @@ public class Main {
 		
 		 */
 
-		
+		/*
 		double vSpeed = 0; double speedWhenTakingOff = 0;
 		Scanner readIn =  new Scanner(System.in);
 		System.out.println("Enter speed and acceleration: ");
@@ -261,7 +261,7 @@ public class Main {
 		double length = (Math.pow(vSpeed, 2) / (2 * speedWhenTakingOff));
 		System.out.printf("The mininmum runway length for this airplan iS : %.3f", length);
 		
-		
+		*/
 		
 		
 		
