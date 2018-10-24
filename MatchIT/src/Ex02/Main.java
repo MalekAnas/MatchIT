@@ -234,6 +234,8 @@ public class Main {
 		 * 
 		 */
 	
+		/*
+		 *
 		Scanner readIn = new Scanner(System.in);
 		System.out.println("Enter the amount of the water in kiloGrams: ");
 		double amountOfWaterKg =readIn.nextDouble();
@@ -247,10 +249,19 @@ public class Main {
 		energyNeeded = amountOfWaterKg * (finalTemp - initinalTemp) * 4184;
 		System.out.println("The energy needed is : "+ energyNeeded);
 		
+		 */
+
+		/*
+		double vSpeed = 0; double speedWhenTakingOff = 0;
+		Scanner readIn =  new Scanner(System.in);
+		System.out.println("Enter speed and acceleration: ");
+		vSpeed = readIn.nextDouble();
+		speedWhenTakingOff = readIn.nextDouble();
 		
+		double length = (Math.pow(vSpeed, 2) / (2 * speedWhenTakingOff));
+		System.out.printf("The mininmum runway length for this airplan iS : %.3f", length);
 		
-		
-		
+		*/
 		
 		
 		

@@ -2,8 +2,6 @@ package Ex03;
 
 import java.util.Scanner;
 
-import javafx.beans.property.ReadOnlyIntegerWrapper;
-
 
 public class Main {
 
