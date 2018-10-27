@@ -197,27 +197,22 @@ public class Main {
 		/*
 		 * cost of driving
 		 */
-		Scanner readIn = new Scanner(System.in);
-		
-		double drivingDistance;
-		double milesPerGalon;
-		double pricePerGalon;
-		
-		System.out.println("Enter the distance to drive: ");
-		drivingDistance = readIn.nextDouble();
-		System.out.println("Enter the miles per Gallon : ");
-		milesPerGalon = readIn.nextDouble();
-		System.out.println("Enter the price per Gallon : ");
-		pricePerGalon = readIn.nextDouble();
-		
-		
-		double cost = (drivingDistance / milesPerGalon) * pricePerGalon;
-		
-		System.out.printf("The cost of driving : %.2f" , cost);
+//		Scanner readIn = new Scanner(System.in);		
+//		double drivingDistance;
+//		double milesPerGalon;
+//		double pricePerGalon;		
+//		System.out.println("Enter the distance to drive: ");
+//		drivingDistance = readIn.nextDouble();
+//		System.out.println("Enter the miles per Gallon : ");
+//		milesPerGalon = readIn.nextDouble();
+//		System.out.println("Enter the price per Gallon : ");
+//		pricePerGalon = readIn.nextDouble();				
+//		double cost = (drivingDistance / milesPerGalon) * pricePerGalon;		
+//		System.out.printf("The cost of driving : %.2f" , cost);
 		
 		
 		
-		
+		/// end of Ex03
 		
 		
 		
