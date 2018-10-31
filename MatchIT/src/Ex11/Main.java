@@ -10,7 +10,7 @@ public class Main {
 		
 		
 		
-		
+		//Ex704
 //comment to test another Class
 //		double [] myarray = new double [100];
 //		Ex11_704 testArray = new Ex11_704();
@@ -24,7 +24,7 @@ public class Main {
 		
 		
 		
-		
+		//Ex705
 //		int [] myArray = new int [10];
 //		Ex11_705 testMyClass = new Ex11_705();
 //		testMyClass.inputNumbers(myArray);
@@ -32,14 +32,14 @@ public class Main {
 // 		System.out.println("number Of distinct numbers : "+ testMyClass.getDistinctNums());
 ////	
 		
-		
+		//Ex706
 //		Ex11_706 findPrim = new Ex11_706();
 //		findPrim.checkPrime();
 		
 		
 		
 		
-		
+		//Ex707
 //		Ex11_707 random = new Ex11_707();
 //		int [] xArr= new int[100];
 //		for(int i =0 ; i < xArr.length ; i++) {
@@ -49,7 +49,7 @@ public class Main {
 //		int [] countArr = new int [10] ;		
 //		Ex11_707.countingNumbers(countArr, xArr);
 		
-		
+		//Ex708
 //		Ex11_708 testObj = new Ex11_708();
 //		int [] x = new int [10];	
 //		double [] y = new double [10];
@@ -57,14 +57,24 @@ public class Main {
 //		double  avg = testObj.average(y);
 //		System.out.println(avg);
 		
-		double  [] x = new double [10];
 		
-		Ex11_709 testObj = new Ex11_709();
+		//Ex709
+//		double  [] x = new double [10];
+//		Ex11_709 testObj = new Ex11_709();
+//		testObj.inputNums(x);
+//		double min = testObj.min(x);
+//		System.out.println("minimum number is :" + min);
 		
-		testObj.inputNums(x);
-		double min = testObj.min(x);
-		System.out.println("minimum number is :" + min);
 		
+		//Ex710
+		
+//		double []x = {11, 1 , 32 ,0  ,7 ,8, 9, 10};
+//		Ex11_710 testObj = new Ex11_710(); 
+//		int indexOfSmallest =  testObj.indexOfMin(x);
+//		System.out.println( "the index of smallest is : " + indexOfSmallest);
+		
+		
+		//Ex711
 		
 		
 		
