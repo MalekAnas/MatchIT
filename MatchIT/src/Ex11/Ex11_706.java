@@ -4,104 +4,64 @@ import java.util.Scanner;
 
 public class Ex11_706 {
 
-	  final int NUMBER_PER_LINE = 10; // Display 10 per line
-	    int count = 0; // Count the number of prime numbers
-	    int number = 2; // A number to be tested for primeness
-	    int squareRoot = 1; // Check whether number <= squareRoot
-	    
-	    
-	    
+	final int NUMBER_PER_LINE = 10; // Display 10 per line
+	int count = 0; // Count the number of prime numbers
+	int number = 2; // A number to be tested for primeness
+	int squareRoot = 1; // Check whether number <= squareRoot
+
 	private int enterTheBorder(int x) {
-		
+
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter a number to show all the primes before it : ");
 		int n = input.nextInt();
 
 		return n;
-		
-	
+
 	}
-public void checkPrime() {
 
-	
-	
-	
-	
-	
-	int n = enterTheBorder(50);
-	
-	
-	
-	
-	
+	public void checkPrime() {
 
-    // A list to hold prime numbers
-    java.util.List<Integer> list = 
-      new java.util.ArrayList<Integer>(); 
+		int n = enterTheBorder(50);
 
-  
+		// A list to hold prime numbers
+		java.util.List<Integer> list = new java.util.ArrayList<Integer>();
 
-    System.out.println("The prime numbers are \n");
+		System.out.println("The prime numbers are \n");
 
-    // Repeatedly find prime numbers
-    while (number <= n) {
-      // Assume the number is prime
-      boolean isPrime = true; // Is the current number prime?
+		// Repeatedly find prime numbers
+		while (number <= n) {
+			// Assume the number is prime
+			boolean isPrime = true; // Is the current number prime?
 
-      if (squareRoot * squareRoot < number) squareRoot++;
-      // For numbers between 36 and 48, squareRoot is 7 which contradicts with the matematical proof.!!!
+			if (squareRoot * squareRoot < number)
+				squareRoot++;
+			// For numbers between 36 and 48, squareRoot is 7 which contradicts with the
+			// matematical proof.!!!
 
-      // ClosestPair if number is prime
-      for (int k = 0; k < list.size() 
-                        && list.get(k) <= squareRoot; k++) {
-        if (number % list.get(k) == 0) { // If true, not prime
-          isPrime = false; // Set isPrime to false          
-          break; // Exit the for loop
-        }
-      }
+			// ClosestPair if number is prime
+			for (int k = 0; k < list.size() && list.get(k) <= squareRoot; k++) {
+				if (number % list.get(k) == 0) { // If true, not prime
+					isPrime = false; // Set isPrime to false
+					break; // Exit the for loop
+				}
+			}
 
-      // Print the prime number and increase the count
-      if (isPrime) {
-        count++; // Increase the count
-        list.add(number); // Add a new prime to the list
-        if (count % NUMBER_PER_LINE == 0) {
-          // Print the number and advance to the new line
-          System.out.println(number);
-        }
-        else
-          System.out.print(number + " ");
-      }
+			// Print the prime number and increase the count
+			if (isPrime) {
+				count++; // Increase the count
+				list.add(number); // Add a new prime to the list
+				if (count % NUMBER_PER_LINE == 0) {
+					// Print the number and advance to the new line
+					System.out.println(number);
+				} else
+					System.out.print(number + " ");
+			}
 
-      // Check if the next number is prime
-      number++;
-    }
+			// Check if the next number is prime
+			number++;
+		}
 
-    System.out.println("\n" + count + 
-      " prime(s) less than or equal to " + n);
-  }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		System.out.println("\n" + count + " prime(s) less than or equal to " + n);
+	}
+
 }
-	
-	
-
-

@@ -33,18 +33,37 @@ public class Main {
 ////	
 		
 		
-		
-		Ex11_706 primeFinder = new Ex11_706();
-		
-		
-		primeFinder.checkPrime();
+//		Ex11_706 findPrim = new Ex11_706();
+//		findPrim.checkPrime();
 		
 		
 		
 		
 		
+//		Ex11_707 random = new Ex11_707();
+//		int [] xArr= new int[100];
+//		for(int i =0 ; i < xArr.length ; i++) {
+//		xArr[i] = Ex11_707.getRandomNumberInRange(0, 9);
+//		System.out.print(xArr[i] + " ");
+//		}
+//		int [] countArr = new int [10] ;		
+//		Ex11_707.countingNumbers(countArr, xArr);
 		
 		
+//		Ex11_708 testObj = new Ex11_708();
+//		int [] x = new int [10];	
+//		double [] y = new double [10];
+//		testObj.inputNums(y);
+//		double  avg = testObj.average(y);
+//		System.out.println(avg);
+		
+		double  [] x = new double [10];
+		
+		Ex11_709 testObj = new Ex11_709();
+		
+		testObj.inputNums(x);
+		double min = testObj.min(x);
+		System.out.println("minimum number is :" + min);
 		
 		
 		
