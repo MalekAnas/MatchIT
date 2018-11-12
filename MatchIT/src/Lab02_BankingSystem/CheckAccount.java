@@ -2,9 +2,20 @@ package Lab02_BankingSystem;
 
 public class CheckAccount implements IbankAccount {
 
-	long accountNo;
-	double balance;
+	private long accountNo;
+	private double balance;
 
+	private boolean isVaild = false;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public long getAccountNo() {
 		return accountNo;
 	}
@@ -23,13 +34,13 @@ public class CheckAccount implements IbankAccount {
 	@Override
 	public double returnBalance() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.balance;
 	}
 
 	@Override
 	public void updateBalance() {
-		// TODO Auto-generated method stub
 
+		
 	}
 
 }
