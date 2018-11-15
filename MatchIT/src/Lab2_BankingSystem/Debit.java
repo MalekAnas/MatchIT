@@ -1,5 +1,5 @@
 package Lab2_BankingSystem;
 
-public class Customer {
+public class Debit extends Bank	{
 
 }
