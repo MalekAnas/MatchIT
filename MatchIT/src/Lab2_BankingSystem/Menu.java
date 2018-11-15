@@ -106,6 +106,9 @@ public class Menu {
 		String personalSecNum;
 		String accountType;
 		
+		//Select the type of account
+	
+		boolean savingVaild = false;
 		
 		
 	}
