@@ -1,5 +1,6 @@
 package Lab2_BankingSystem;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -9,6 +10,10 @@ public class Menu {
 	boolean exit;
 
 	public static void main(String[] args) {
+
+		Menu menu = new Menu();
+
+		menu.runMenu();
 
 	}
 
@@ -24,7 +29,7 @@ public class Menu {
 	private void printHeader() {
 
 		System.out.println("+----------------------------------------------+");
-		System.out.println("|          Welcom to Malek's Bank App          |");
+		System.out.println("|         Welcom to Malek's Bank System        |");
 		System.out.println("+----------------------------------------------+");
 
 	}
@@ -60,10 +65,8 @@ public class Menu {
 
 	private void doAnAction(int choice) {
 
-
 		switch (choice) {
-		
-		
+
 		case 0:
 			System.out.println("Program finished, Thank you!");
 			System.exit(0);
@@ -71,47 +74,135 @@ public class Menu {
 		case 1:
 			createAccount();
 			break;
-		case 2: 
-			//makeAdeposite();
+		case 2:
+			makeAdeposite();
 			break;
-		case 3: 
-			//makeAwithdraw();
+		case 3:
+			// makeAwithdraw();
 			break;
 		case 4:
-			//listAccountBalance();
+			// listAccountBalance();
 			break;
-		default: 
+		default:
 			System.out.println("Unknown error happend");
 			break;
-			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		}
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	private void createAccount() {
 
-		double initalBalance;
-		String name;
-		String personalSecNum;
-		String accountType;
-		
-		//Select the type of account
+		double initalBalance = 0;
+		String name = "";
+		String personalSecNum = "";
+		String accountType = "";
+		boolean vaild = false;
+
+		// Select the type of account
+		while (!vaild) {
+			System.out.println("Enter an account type (Saving or Checking): ");
+			accountType = readIn.nextLine();
+			if (accountType.equalsIgnoreCase("checking") || accountType.equalsIgnoreCase("Saving")) {
+				vaild = true;
+
+			} else {
+				System.out.println("Account type selection faild, enter checking or saving!");
+
+			}
+		}
+
+		System.out.println("Enter Account holder name: ");
+		name = readIn.nextLine();
+		System.out.println("Enter your personal security number: ");
+		personalSecNum = readIn.nextLine();
+
+		vaild = false;
+		while (!vaild) {
+			System.out.println("Enter your initial balance:");
+			try {
+				initalBalance = Double.parseDouble(readIn.nextLine());
+			} catch (NumberFormatException e) {
+				System.out.println("Obs! Balance should be a number!");
+			}
+
+			if (accountType.equalsIgnoreCase("checking")) {
+				if (initalBalance < 100) {
+					System.out.println("checking account needs 100 pounds to be opened.");
+				} else
+					vaild = true;
+			}
+
+			if (accountType.equalsIgnoreCase("saving")) {
+				if (initalBalance < 10) {
+					System.out.println("saving account needs 10 pounds to be opened.");
+				} else
+					vaild = true;
+			}
+
+		}
+
+		Account account;
+		if (accountType.equalsIgnoreCase("checking")) {
+			account = new Checking(initalBalance);
+		} else {
+			account = new Savings(initalBalance);
+		}
+
+		Customer customer = new Customer(name, personalSecNum, account);
+		bank.addCustomer(customer);
+
+	}
 	
-		boolean savingVaild = false;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	private void makeAdeposite() {
+		int account = chooseAccount();
+		System.out.println("Enter the amount of the deposit: ");
+	
+		double depositAmount =0;
+		try {
+			depositAmount = Double.parseDouble(readIn.nextLine());
+			
+			
+		} catch (NumberFormatException e) {
+			depositAmount = 0;
+		}
 		
-		//still testing
-		System.out.println();
+		bank.getCusomer(account).getAccount().deposit(depositAmount);
+	}
+
+	private int chooseAccount() {
+		
+		ArrayList<Customer> customers = bank.getCustomers();
+		System.out.println("Select the acocunt: ");
+		for (Customer customer : customers) {
+			System.out.println(customer  );
+		}
+		return 0;
 	}
 
 }
